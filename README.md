@@ -1,5 +1,4 @@
 # insmontsacopafutbol.github.io
-<!DOCTYPE html>
 <html lang="ca">
 <head>
   <meta charset="UTF-8" />
@@ -80,4 +79,37 @@
   <div class="section-title">Canvis</div>
   <table>
     <tr><th>Equip</th><th>Jugador que surt (nº)</th><th>Jugador que entra (nº)</th><th>Minut</th></tr>
-    <tr><td><input type="text"/></td><td><input type="text"/></td><
+    <tr><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td></tr>
+    <tr><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td></tr>
+  </table>
+
+  <div class="section-title">Resultat Final</div>
+  <table>
+    <tr><td>Equip Local:</td><td><input type="text"/></td><td>Equip Visitant:</td><td><input type="text"/></td></tr>
+  </table>
+
+  <div class="section-title">Àrbitre</div>
+  <table>
+    <tr><td>Principal:</td><td><input type="text"/></td><td>Assistents:</td><td><input type="text"/></td></tr>
+  </table>
+
+  <script>
+    // Desa les dades quan s'edita algun camp
+    document.addEventListener("input", () => {
+      const inputs = document.querySelectorAll("input");
+      const data = {};
+      inputs.forEach((input, i) => data[i] = input.value);
+      localStorage.setItem("futbolFormData", JSON.stringify(data));
+    });
+
+    // Carrega les dades guardades si existeixen
+    window.addEventListener("DOMContentLoaded", () => {
+      const saved = JSON.parse(localStorage.getItem("futbolFormData") || "{}");
+      const inputs = document.querySelectorAll("input");
+      inputs.forEach((input, i) => {
+        if (saved[i]) input.value = saved[i];
+      });
+    });
+  </script>
+</body>
+</html>
