@@ -1,4 +1,5 @@
 # insmontsacopafutbol.github.io
+<!DOCTYPE html>
 <html lang="ca">
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +9,6 @@
     body {
       font-family: Arial, sans-serif;
       margin: 20px;
-      line-height: 1.6;
     }
     h1 {
       text-align: center;
@@ -32,81 +32,76 @@
       padding: 10px;
       margin-top: 20px;
     }
-    input {
+    input, textarea {
       width: 100%;
       border: none;
-      background: transparent;
-      font-size: 1em;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 4px;
     }
-    input:focus {
-      outline: none;
-      background: #e6f7ff;
+    input:focus, textarea:focus {
+      outline: 2px solid #007bff;
+    }
+    .print-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
+
   <h1>Full de Puntuació de Futbol</h1>
+
+  <button class="print-button" onclick="window.print()">Imprimeix / Desa com a PDF</button>
 
   <div class="section-title">Dades del Partit</div>
   <table>
-    <tr><td>Data:</td><td><input type="text"/></td><td>Hora:</td><td><input type="text"/></td></tr>
-    <tr><td>Lloc:</td><td colspan="3"><input type="text"/></td></tr>
-    <tr><td>Equip Local:</td><td><input type="text"/></td><td>Equip Visitant:</td><td><input type="text"/></td></tr>
+    <tr><td>Data:</td><td><input type="text" /></td><td>Hora:</td><td><input type="text" /></td></tr>
+    <tr><td>Lloc:</td><td colspan="3"><input type="text" /></td></tr>
+    <tr><td>Equip Local:</td><td><input type="text" /></td><td>Equip Visitant:</td><td><input type="text" /></td></tr>
   </table>
 
   <div class="section-title">Temps de Joc</div>
   <table>
     <tr><th>Temps</th><th>Minut d'Inici</th><th>Minut Final</th></tr>
-    <tr><td>Primera part</td><td><input type="text"/></td><td><input type="text"/></td></tr>
-    <tr><td>Segona part</td><td><input type="text"/></td><td><input type="text"/></td></tr>
-    <tr><td>Afegit</td><td><input type="text"/></td><td><input type="text"/></td></tr>
+    <tr><td>Primera part</td><td><input type="text" /></td><td><input type="text" /></td></tr>
+    <tr><td>Segona part</td><td><input type="text" /></td><td><input type="text" /></td></tr>
+    <tr><td>Afegit</td><td><input type="text" /></td><td><input type="text" /></td></tr>
   </table>
 
   <div class="section-title">Gols</div>
   <table>
     <tr><th>Equip</th><th>Jugador (nº)</th><th>Minut</th><th>Tipus</th></tr>
-    <tr><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td></tr>
-    <tr><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td></tr>
   </table>
 
   <div class="section-title">Targetes</div>
   <table>
     <tr><th>Equip</th><th>Jugador (nº)</th><th>Minut</th><th>Targeta</th><th>Motiu</th></tr>
-    <tr><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td></tr>
-    <tr><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td></tr>
   </table>
 
   <div class="section-title">Canvis</div>
   <table>
     <tr><th>Equip</th><th>Jugador que surt (nº)</th><th>Jugador que entra (nº)</th><th>Minut</th></tr>
-    <tr><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td></tr>
-    <tr><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td><td><input type="text"/></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td></tr>
+    <tr><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td><td><input type="text" /></td></tr>
   </table>
 
   <div class="section-title">Resultat Final</div>
   <table>
-    <tr><td>Equip Local:</td><td><input type="text"/></td><td>Equip Visitant:</td><td><input type="text"/></td></tr>
+    <tr><td>Equip Local:</td><td><input type="text" /></td><td>Equip Visitant:</td><td><input type="text" /></td></tr>
   </table>
 
   <div class="section-title">Àrbitre</div>
   <table>
-    <tr><td>Principal:</td><td><input type="text"/></td><td>Assistents:</td><td><input type="text"/></td></tr>
+    <tr><td>Principal:</td><td><input type="text" /></td><td>Assistents:</td><td><input type="text" /></td></tr>
   </table>
 
-  <script>
-    document.addEventListener("input", () => {
-      const inputs = document.querySelectorAll("input");
-      const data = {};
-      inputs.forEach((input, i) => data[i] = input.value);
-      localStorage.setItem("futbolFormData", JSON.stringify(data));
-    });
-    window.addEventListener("DOMContentLoaded", () => {
-      const saved = JSON.parse(localStorage.getItem("futbolFormData") || "{}");
-      const inputs = document.querySelectorAll("input");
-      inputs.forEach((input, i) => {
-        if (saved[i]) input.value = saved[i];
-      });
-    });
-  </script>
 </body>
 </html>
