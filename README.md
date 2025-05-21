@@ -94,15 +94,12 @@
   </table>
 
   <script>
-    // Desa les dades quan s'edita algun camp
     document.addEventListener("input", () => {
       const inputs = document.querySelectorAll("input");
       const data = {};
       inputs.forEach((input, i) => data[i] = input.value);
       localStorage.setItem("futbolFormData", JSON.stringify(data));
     });
-
-    // Carrega les dades guardades si existeixen
     window.addEventListener("DOMContentLoaded", () => {
       const saved = JSON.parse(localStorage.getItem("futbolFormData") || "{}");
       const inputs = document.querySelectorAll("input");
