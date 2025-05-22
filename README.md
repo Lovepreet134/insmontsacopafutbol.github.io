@@ -1,5 +1,4 @@
 # insmontsacopafutbol.github.io
-<!DOCTYPE html>
 <html lang="ca">
 <head>
   <meta charset="UTF-8" />
